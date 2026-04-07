@@ -1,0 +1,74 @@
+{
+  "daily_revenue": {
+    "model": "ARIMA",
+    "classical_tuning": {
+      "ARIMA": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      },
+      "SARIMA": {
+        "order": [
+          1,
+          1,
+          1
+        ],
+        "seasonal_order": [
+          1,
+          1,
+          1,
+          7
+        ]
+      }
+    },
+    "ml_tuning": {
+      "XGBoost": {
+        "n_estimators": 200,
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "random_state": 42,
+        "objective": "reg:squarederror"
+      }
+    }
+  },
+  "daily_orders": {
+    "model": "ARIMA",
+    "classical_tuning": {
+      "ARIMA": {
+        "order": [
+          1,
+          1,
+          2
+        ]
+      },
+      "SARIMA": {
+        "order": [
+          2,
+          0,
+          2
+        ],
+        "seasonal_order": [
+          0,
+          1,
+          1,
+          7
+        ]
+      }
+    },
+    "ml_tuning": {
+      "XGBoost": {
+        "n_estimators": 200,
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "random_state": 42,
+        "objective": "reg:squarederror"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "daily_revenue": {
+    "XGBoost": {
+      "n_estimators": 200,
+      "learning_rate": 0.05,
+      "max_depth": 3,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "random_state": 42,
+      "objective": "reg:squarederror"
+    }
+  },
+  "daily_orders": {
+    "XGBoost": {
+      "n_estimators": 200,
+      "learning_rate": 0.05,
+      "max_depth": 3,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "random_state": 42,
+      "objective": "reg:squarederror"
+    }
+  }
+}

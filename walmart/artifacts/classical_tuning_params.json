@@ -1,0 +1,46 @@
+{
+  "daily_revenue": {
+    "ARIMA": {
+      "order": [
+        1,
+        0,
+        1
+      ]
+    },
+    "SARIMA": {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        1,
+        7
+      ]
+    }
+  },
+  "daily_orders": {
+    "ARIMA": {
+      "order": [
+        1,
+        1,
+        2
+      ]
+    },
+    "SARIMA": {
+      "order": [
+        2,
+        0,
+        2
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ]
+    }
+  }
+}
