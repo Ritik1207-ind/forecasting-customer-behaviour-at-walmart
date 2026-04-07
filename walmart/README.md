@@ -1,53 +1,63 @@
-# Walmart Time Series Forecasting Project
+# 🛒 Walmart Time-Series Forecasting: Customer Behaviour Analysis
 
-This project forecasts:
-- Daily total revenue (`Purchase_Amount` sum)
-- Daily order count (transaction count)
+This high-performance project aims to forecast daily revenue and order volumes for Walmart transactional data using a hybrid approach of **Statistical Classical Models** and **Advanced Machine Learning Regressors**.
 
-It includes:
-- Preprocessing and aggregation from transactional data
-- Models: Naive, Seasonal Naive, Linear Regression, XGBoost, ARIMA, SARIMA, Holt, Holt-Winters (ETS)
-- Rolling time-series evaluation with loss metrics (MAE, RMSE, MSE, MAPE)
-- Visualizations and diagnostics
-- Model and artifact saving
+## 🌟 Key Features
+- **Comprehensive Model Suite**: Evaluates 10+ models including ARIMA, SARIMA, XGBoost, LightGBM, CatBoost, and Random Forest.
+- **Recursive Forecasting**: Implements multi-step recursive prediction with dynamic feature engineering (lags, rolling stats).
+- **Advanced Visualizations**: Detailed model leaderboards, feature importance analysis, residual diagnostics, and multi-metric heatmaps.
+- **Cross-Validation**: Robust evaluation using rolling-window splits to ensure stability across time.
+- **Automated Artifacts**: Saves final forecasts, performance reports, and serialized models ready for inference.
 
-## Structure
+## 🏗️ Project Structure
+```text
+walmart/
+├── artifacts/            # Generated metrics (CSV), plots (PNG), and tuning params
+├── data/                 # Raw and processed datasets
+├── models/               # Serialized top-performing models (.joblib, .json)
+├── notebooks/            # Step-by-step experiment pipeline
+│   ├── 01_data_preprocessing.ipynb
+│   ├── 02_classical_models.ipynb
+│   ├── 03_ml_models.ipynb
+│   ├── 03b_extended_ml_models.ipynb   <-- Added for more robust ML
+│   ├── 04_evaluation_visualization.ipynb
+│   ├── 04b_extended_visualizations.ipynb <-- Interactive/Parallel Viz
+│   ├── 04c_diverse_visualizations.ipynb  <-- Distribution & Analysis
+│   ├── 04e_best_model_showcase.ipynb     <-- The Winner Circle
+│   └── 05_model_saving_and_inference.ipynb
+└── requirements.txt      # Project dependencies
+```
 
-- `data/Walmart_customer_purchases.csv`
-- `notebooks/01_data_preprocessing.ipynb`
-- `notebooks/02_classical_models.ipynb`
-- `notebooks/03_ml_models.ipynb`
-- `notebooks/04_evaluation_visualization.ipynb`
-- `notebooks/05_model_saving_and_inference.ipynb`
-- `models/` (saved fitted models)
-- `artifacts/` (metrics, forecasts, plots)
+## 🚀 Quick Start
 
-## Quick Start
-
-1. Install dependencies:
-
-```powershell
+### 1. Installation
+Clone the repository and install the dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
-2. Open and run notebooks in this order:
+### 2. Execution Flow
+For the most current results, run the notebooks in numerical order. The project is designed to be Modular:
+1. **Pre-processing**: Aggregates raw transactions into clean daily time-series.
+2. **Experimentation**: Run notebooks 02, 03, and 03b to build and score models.
+3. **Visualization**: Run 04b, 04c, and 04e to generate deep insights.
+4. **Export**: Use 05 to save the best model for production.
 
-- `notebooks/01_data_preprocessing.ipynb`
-- `notebooks/02_classical_models.ipynb`
-- `notebooks/03_ml_models.ipynb`
-- `notebooks/04_evaluation_visualization.ipynb`
-- `notebooks/05_model_saving_and_inference.ipynb`
+## 📈 Top Performance (RMSE)
+| Target          | Best Model | RMSE    |
+|:----------------|:-----------|:--------|
+| **Daily Revenue**| **ARIMA**  | ~3364   |
+| **Daily Orders** | **ARIMA**  | ~12.29  |
 
-3. Outputs:
+## 🛠️ Built With
+- **Python 3.12+**
+- **Statsmodels**: ARIMA, SARIMA, ETS
+- **Scikit-Learn**: Lasso, Ridge, Random Forest
+- **Boosting**: XGBoost, LightGBM
+- **Visualization**: Seaborn, Matplotlib
 
-- `artifacts/classical_metrics_summary.csv`
-- `artifacts/ml_metrics_summary.csv`
-- `artifacts/all_metrics_summary.csv`
-- `artifacts/best_models_table.csv`
-- `artifacts/best_models_selected.json`
-- `artifacts/classical_tuning_params.json`
-- `artifacts/ml_tuning_params.json`
-- `artifacts/final_forecasts.csv`
-- `artifacts/final_model_registry.json`
-- Plot files in `artifacts/`
-- Serialized models in `models/`
+## 👥 Author
+**Ritik Sinha** - [GitHub](https://github.com/Ritik1207-ind)
+
+---
+*Developed as part of Advanced Agentic Coding experimentation.*
