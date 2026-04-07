@@ -56,8 +56,9 @@ For the most current results, run the notebooks in numerical order. The project 
 - **Boosting**: XGBoost, LightGBM
 - **Visualization**: Seaborn, Matplotlib
 
-## 👥 Author
+## 👥 Authors
 **Ritik Sinha** - [GitHub](https://github.com/Ritik1207-ind)
-
+**Udit Dadhich** - [Github](https://github.com/UditDadhich)
+**Shivam kishore** - [Github](https://github.com/Shivwhoo)
 ---
 *Developed as part of Advanced Agentic Coding experimentation.*
